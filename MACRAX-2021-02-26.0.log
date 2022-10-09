@@ -1,0 +1,229 @@
+2021-02-26 19:21:51.814  INFO 1144 --- [main] a.c.m.macraxuser.MacraxUserApplication   : Starting MacraxUserApplication on DESKTOP-66I0UHU with PID 1144 (D:\Macrax User API Project\amn_project_user\target\classes started by hp in D:\Macrax User API Project\amn_project_user)
+2021-02-26 19:21:51.840  INFO 1144 --- [main] a.c.m.macraxuser.MacraxUserApplication   : No active profile set, falling back to default profiles: default
+2021-02-26 19:21:55.921  INFO 1144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-02-26 19:21:56.157  INFO 1144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 180ms. Found 15 JPA repository interfaces.
+2021-02-26 19:21:57.212  INFO 1144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8445 (http)
+2021-02-26 19:21:57.243  INFO 1144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-26 19:21:57.244  INFO 1144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-02-26 19:21:57.894  INFO 1144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-26 19:21:57.895  INFO 1144 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5924 ms
+2021-02-26 19:21:58.255  INFO 1144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-26 19:21:58.284  INFO 1144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-26 19:21:58.285  WARN 1144 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-26 19:22:00.317 ERROR 1144 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:133) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$Lambda$506/620261614.get(Unknown Source) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties$$Lambda$507/898283008.get(Unknown Source) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:136) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:102) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:94) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:133) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_31]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_31]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_31]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_31]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$146/1534754611.getObject(Unknown Source) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) [spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) [spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) [spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at amn.com.macrax.macraxuser.MacraxUserApplication.main(MacraxUserApplication.java:26) [classes/:na]
+
+2021-02-26 19:22:00.454  INFO 1144 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-26 19:22:00.647  WARN 1144 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-26 19:22:00.698  INFO 1144 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-02-26 19:22:01.424  INFO 1144 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-26 19:22:01.626  INFO 1144 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-26 19:22:01.627  WARN 1144 --- [task-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-26 19:22:02.631 ERROR 1144 --- [task-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) [hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) [spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$$Lambda$528/817460653.call(Unknown Source) [spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2021-02-26 19:22:02.632  WARN 1144 --- [task-1] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+2021-02-26 19:22:02.675  INFO 1144 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-02-26 19:22:03.489  INFO 1144 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e9a0bea, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa76ad2, org.springframework.security.web.header.HeaderWriterFilter@3709748f, org.springframework.security.web.authentication.logout.LogoutFilter@45801322, amn.com.macrax.macraxuser.filter.JwtFilter@2924f1d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25791d40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76c86567, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28fc1132, org.springframework.security.web.session.SessionManagementFilter@6df4af5, org.springframework.security.web.access.ExceptionTranslationFilter@72ecbcb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@320be73]
+2021-02-26 19:22:03.549  INFO 1144 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-26 19:22:04.246  INFO 1144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8445 (http) with context path ''
+2021-02-26 19:22:04.248  INFO 1144 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-26 19:22:04.251  INFO 1144 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-26 19:22:04.262  INFO 1144 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-26 19:22:04.262  INFO 1144 --- [task-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-26 19:22:04.263  WARN 1144 --- [task-2] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-26 19:22:04.276  INFO 1144 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-02-26 19:22:04.324  INFO 1144 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-26 19:22:04.578  INFO 1144 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllActiveJobsUsingGET_1
+2021-02-26 19:22:04.644  INFO 1144 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-02-26 19:22:05.267 ERROR 1144 --- [task-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:324) [spring-jdbc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:133) [spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.lambda$isInitializingDatabase$0(DataSourceInitializedPublisher.java:116) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$$Lambda$654/797600792.get(Unknown Source) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties$$Lambda$507/898283008.get(Unknown Source) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:136) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:102) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:94) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.isInitializingDatabase(DataSourceInitializedPublisher.java:118) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:98) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.access$100(DataSourceInitializedPublisher.java:50) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$DataSourceSchemaCreatedPublisher.lambda$postProcessEntityManagerFactory$0(DataSourceInitializedPublisher.java:200) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$DataSourceSchemaCreatedPublisher$$Lambda$653/2036218150.run(Unknown Source) [spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2021-02-26 19:22:06.301  INFO 1144 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-02-26 19:22:06.310  INFO 1144 --- [main] a.c.m.macraxuser.MacraxUserApplication   : Started MacraxUserApplication in 15.718 seconds (JVM running for 24.833)
+2021-02-26 19:24:00.158  INFO 1144 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-26 19:24:00.158  INFO 1144 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-26 19:24:00.539  INFO 1144 --- [RMI TCP Connection(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-26 19:24:00.542  INFO 1144 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-26 19:24:26.000  INFO 19464 --- [main] a.c.m.macraxuser.MacraxUserApplication   : Starting MacraxUserApplication on DESKTOP-66I0UHU with PID 19464 (D:\Macrax User API Project\amn_project_user\target\classes started by hp in D:\Macrax User API Project\amn_project_user)
+2021-02-26 19:24:26.004  INFO 19464 --- [main] a.c.m.macraxuser.MacraxUserApplication   : No active profile set, falling back to default profiles: default
+2021-02-26 19:24:27.259  INFO 19464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-02-26 19:24:27.409  INFO 19464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140ms. Found 15 JPA repository interfaces.
+2021-02-26 19:24:28.084  INFO 19464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8445 (http)
+2021-02-26 19:24:28.093  INFO 19464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-26 19:24:28.093  INFO 19464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-02-26 19:24:28.271  INFO 19464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-26 19:24:28.272  INFO 19464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2167 ms
+2021-02-26 19:24:28.542  INFO 19464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-26 19:24:28.553  INFO 19464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-26 19:24:28.555  WARN 19464 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-26 19:24:29.586  INFO 19464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-26 19:24:29.645  INFO 19464 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-26 19:24:29.706  WARN 19464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-26 19:24:29.723  INFO 19464 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-02-26 19:24:30.080  INFO 19464 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-26 19:24:30.223  INFO 19464 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-02-26 19:24:31.291  INFO 19464 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-26 19:24:31.302  INFO 19464 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-26 19:24:31.459  INFO 19464 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39266403, org.springframework.security.web.context.SecurityContextPersistenceFilter@1edccfd4, org.springframework.security.web.header.HeaderWriterFilter@17c0274c, org.springframework.security.web.authentication.logout.LogoutFilter@689faf79, amn.com.macrax.macraxuser.filter.JwtFilter@a92be4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1efac5b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f27f59b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74b00247, org.springframework.security.web.session.SessionManagementFilter@34045582, org.springframework.security.web.access.ExceptionTranslationFilter@448c92fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41e9f86]
+2021-02-26 19:24:31.500  INFO 19464 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-26 19:24:31.898  INFO 19464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8445 (http) with context path ''
+2021-02-26 19:24:31.900  INFO 19464 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-26 19:24:31.924  INFO 19464 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-02-26 19:24:31.968  INFO 19464 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-26 19:24:32.192  INFO 19464 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllActiveJobsUsingGET_1
+2021-02-26 19:24:32.324  INFO 19464 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-02-26 19:24:33.319  INFO 19464 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-02-26 19:24:33.328  INFO 19464 --- [main] a.c.m.macraxuser.MacraxUserApplication   : Started MacraxUserApplication in 7.769 seconds (JVM running for 8.728)
+2021-02-26 19:25:18.926  INFO 19464 --- [http-nio-8445-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030x1e0xc70xe40xc25N0xce}0xae0x13AS0xb830x990xe40x170xf30xec0xbe0xf5j:0x030xeb0xdc0x1c0x8c]>0xdd0xeb]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:413) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2021-02-26 19:33:09.031  INFO 19464 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-26 19:33:09.091  INFO 19464 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-26 19:33:09.264  INFO 19464 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-26 19:33:09.266  INFO 19464 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-26 19:33:09.267  INFO 19464 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-26 19:33:09.279  INFO 19464 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

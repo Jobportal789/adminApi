@@ -1,0 +1,35 @@
+2021-02-27 17:11:15.199  INFO 24176 --- [main] a.c.m.macraxuser.MacraxUserApplication   : Starting MacraxUserApplication on DESKTOP-66I0UHU with PID 24176 (D:\Macrax User API Project\amn_project_user\target\classes started by hp in D:\Macrax User API Project\amn_project_user)
+2021-02-27 17:11:15.223  INFO 24176 --- [main] a.c.m.macraxuser.MacraxUserApplication   : No active profile set, falling back to default profiles: default
+2021-02-27 17:11:17.536  INFO 24176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-02-27 17:11:17.691  INFO 24176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147ms. Found 15 JPA repository interfaces.
+2021-02-27 17:11:18.444  INFO 24176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 443 (https)
+2021-02-27 17:11:18.468  INFO 24176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-27 17:11:18.468  INFO 24176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-02-27 17:11:18.692  INFO 24176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-27 17:11:18.693  INFO 24176 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3366 ms
+2021-02-27 17:11:19.004  INFO 24176 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-27 17:11:19.012  INFO 24176 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-27 17:11:19.020  WARN 24176 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-27 17:11:19.836  INFO 24176 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-27 17:11:20.103  INFO 24176 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-27 17:11:20.207  WARN 24176 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-27 17:11:20.335  INFO 24176 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-02-27 17:11:21.144  INFO 24176 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-27 17:11:21.454  INFO 24176 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-02-27 17:11:23.127  INFO 24176 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-27 17:11:23.138  INFO 24176 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-27 17:11:23.346  INFO 24176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@447fa959, org.springframework.security.web.context.SecurityContextPersistenceFilter@582e9152, org.springframework.security.web.header.HeaderWriterFilter@340cb97f, org.springframework.security.web.authentication.logout.LogoutFilter@32ea16b7, amn.com.macrax.macraxuser.filter.JwtFilter@54d8c20d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@349c4d1c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d518c66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e4d40ea, org.springframework.security.web.session.SessionManagementFilter@357f6391, org.springframework.security.web.access.ExceptionTranslationFilter@291a4791, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@604d28c6]
+2021-02-27 17:11:23.378  INFO 24176 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-27 17:11:28.846  INFO 24176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 443 (https) with context path ''
+2021-02-27 17:11:28.852  INFO 24176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-02-27 17:11:28.892  INFO 24176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-02-27 17:11:28.980  INFO 24176 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-02-27 17:11:29.268  INFO 24176 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllActiveJobsUsingGET_1
+2021-02-27 17:11:29.341  INFO 24176 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-02-27 17:11:31.094  INFO 24176 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-02-27 17:11:31.105  INFO 24176 --- [main] a.c.m.macraxuser.MacraxUserApplication   : Started MacraxUserApplication in 16.357 seconds (JVM running for 17.614)
+2021-02-27 17:12:13.009  INFO 24176 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-02-27 17:12:13.298  INFO 24176 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-27 17:12:13.298  INFO 24176 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-27 17:12:13.306  INFO 24176 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-27 17:12:13.330  INFO 24176 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
